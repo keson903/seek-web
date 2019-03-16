@@ -58,7 +58,9 @@ class CustomerAddPage extends BaseComponent {
 
   addCustomer(event) {
     const {name} = event;
-    this.setState({name, step: 1});
+    const {customer} = this.state;
+    customer.name = name;
+    this.setState({name, customer, step: 1});
   }
 
   async checkOut(e) {
