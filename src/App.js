@@ -11,7 +11,7 @@ import CustomerAddPage from './add/CustomerAdd';
 const generateClassName = createGenerateClassName();
 const jss = create({
   ...jssPreset(),
-  insertionPoint: 'jss-insertion-point',
+  insertionPoint: document.getElementById('jss-insertion-point'),
 });
 
 const Root = styled.div({
