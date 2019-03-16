@@ -26,6 +26,7 @@ class RulesForm extends Component {
 
   componentDidMount() {
     const {rules} = this.props;
+    console.log(rules);
     this.setState({rules});
   }
 
@@ -43,6 +44,7 @@ class RulesForm extends Component {
 
   ruleChanged(rule, index) {
     const {rules} = this.state;
+    console.log('change', rule);
     rules[index] = rule;
     this.setState({rules});
   }

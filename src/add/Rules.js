@@ -210,7 +210,7 @@ class Rules extends BaseComponent {
           <InputLabel>Ads</InputLabel>
           <Select
             value={ad}
-            onChange={(event) => {this.setState({ad: event.target.value})}}
+            onChange={(event) => this.adChanged(event.target.value)}
             input={<OutlinedInput labelWidth={28} />}>
             {ads.map(ad => (<MenuItem key={ad.id} value={ad.id}>{ad.name}</MenuItem>))}
           </Select>
@@ -244,6 +244,13 @@ class Rules extends BaseComponent {
     const {onChange} = this.props;
     onChange && onChange(e);
   }
+
+  adChanged(ad) {
+    const {rule} = this.state;
+    this.setState({ad})
+    this.onChange({ad, rule});
+  }
+
 
   ruleChanged(rule) {
     const {ad} = this.state;
