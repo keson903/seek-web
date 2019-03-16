@@ -26,10 +26,6 @@ class ProductsForm extends Component {
     ads: []
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   componentWillReceiveProps(nextProps) {
     const {ads} = nextProps;
     const {ads: as} = this.props;

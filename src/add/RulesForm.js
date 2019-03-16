@@ -16,10 +16,6 @@ class RulesForm extends Component {
     rules: []
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   componentWillReceiveProps(nextProps) {
     const {rules} = nextProps;
     const {rules: rls} = this.props;
@@ -89,6 +85,9 @@ class RulesForm extends Component {
             discount: value2
           }
         };
+
+      default:
+        return {};
     }
   }
 
